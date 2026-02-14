@@ -13,6 +13,7 @@ public static void main(String[] args) {
         System.out.println("");
     }
 
+    System.out.println("");
     String[][] horizontal = new String[11][11];
 
     for(int i = 0; i < 11; i++){
@@ -27,6 +28,7 @@ public static void main(String[] args) {
         System.out.println("");
     }
 
+    System.out.println("");
     String[][] vertical = new String[11][11];
 
     for(int i = 0; i < 11; i++){
@@ -41,12 +43,52 @@ public static void main(String[] args) {
         System.out.println("");
     }
     
-    // String[][] diagonal = new String[11][11];
-    // for(int i = 0; i < 11; i++){
-    //     for(int j = 0; j < 11; j++){
-            
-    //     }
-    // }
+    System.out.println("");
+    String[][] diagonal = new String[11][11];
+    for(int i = 0; i < 11; i++){
+        for(int j = 0; j < 11; j++){
+            if(i % 2 == 0 && j % 2 != 0) {
+                diagonal[i][j] = "🌸";
+            } else if (i % 2 == 0 && j % 2 == 0) {
+                diagonal[i][j] = "🌺";
+            }
+            if(i % 2 != 0 && j % 2 == 0) {
+                diagonal[i][j] = "🌸";
+            } else if (i % 2 != 0 && j % 2 != 0) {
+                diagonal[i][j] = "🌺";
+            }
+            System.out.print(diagonal[i][j]);
+        }
+        System.out.println("");
+    }
+
+    System.out.println("");
+    String[][] plaid = new String[11][11];
+    for(int i = 0; i < 11; i++){
+        for(int j = 0; j < 11; j++){
+           if((i % 2 == 0) && (j % 2 != 0)){
+                    plaid[i][j] = "🌺"; 
+            }else{
+                plaid[i][j] = "🌸";
+            }
+            System.out.print(plaid[i][j]);
+        }
+        System.out.println("");
+    }
+
+    System.out.println("");
+    String[][] argyle = new String[11][11];
+    for(int i = 0; i < 11; i++){
+        for(int j = 0; j < 11; j++){
+            if (((i - j) % 5 == 0) || ((i + j) % 5 == 0)) {
+                argyle[i][j] = "🌺";
+            } else {
+                argyle[i][j] = "🌸";
+            }
+            System.out.print(argyle[i][j]);
+        }
+        System.out.println("");
+    }
 }
 
     // public static void weave(String[][] rug) {
